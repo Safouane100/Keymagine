@@ -1,0 +1,9 @@
+{% macro polling(url, taskid) %}
+    <span aria-busy="true"
+          hx-get="{{ get_url }}"
+          hx-vals='{"taskid": "{{ taskid }}"}'
+          hx-trigger="load delay:1s"
+          hx-select-oob="#visualcue"
+          hx-swap="outerHTML">Generating...</span>
+{% endmacro %}
+{{ polling(get_url, result.id) }}

@@ -1,0 +1,8 @@
+{% extends "base.jinja" %}
+{% block content %}
+    <div id="lol1">Lol1</div>
+    <div id="lol2">Lol2</div>
+    <div id="lol3">Lol3</div>
+    <div id="swapme">Swap me</div>
+    <button hx-post="/pair/2/testoob" hx-swap="outerHTML" hx-target="#swapme">Swap</button>
+{% endblock content %}

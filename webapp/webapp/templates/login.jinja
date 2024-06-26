@@ -1,0 +1,12 @@
+{% extends "base.jinja" %}
+
+{% block content %}
+<form>
+    {% if error %}
+    <input type="text" name="id" placeholder="User id invalid" aria-label="User id" aria-invalid="true" required />
+    {% else %}
+    <input type="text" name="id" placeholder="User id" aria-label="User id" required />
+    {% endif %}
+    <input type="submit" value="Log in"/>
+</form>
+{% endblock content %}

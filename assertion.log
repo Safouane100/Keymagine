@@ -1,0 +1,106 @@
+2024-03-04 23:45:28,096 - dspy.primitives.assertions - ERROR - AssertionError: Only return the similar word
+2024-03-04 23:45:29,393 - dspy.primitives.assertions - ERROR - AssertionError: Only return the similar word
+2024-03-04 23:45:30,421 - dspy.primitives.assertions - ERROR - AssertionError: Only return the similar word
+2024-03-04 23:45:31,435 - dspy.primitives.assertions - ERROR - AssertionError: Only return the similar word
+2024-03-04 23:45:32,499 - dspy.primitives.assertions - ERROR - AssertionError: Only return the similar word
+2024-03-20 17:20:46,280 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-03-20 17:21:09,141 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-03-20 17:21:30,677 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-03-20 17:21:35,627 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-03-20 17:36:40,813 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-03-20 17:36:40,825 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-03-20 17:36:41,664 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-03-21 13:20:49,354 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-03-21 13:20:50,612 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-03-21 13:20:51,883 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-04-16 16:39:15,615 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-04-16 16:39:15,664 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-04-16 16:39:15,705 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-04-16 16:40:17,191 - dspy.primitives.assertions - ERROR - SuggestionFailed: Similar word should not just be a translation of the foreign word
+2024-04-16 16:40:17,209 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-04-16 16:40:17,231 - dspy.primitives.assertions - ERROR - SuggestionFailed: Only answer with a single word.
+2024-05-05 14:14:44,382 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return None as a similar word for!
+2024-05-05 14:14:46,825 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return None as a similar word for!
+2024-05-05 14:14:46,827 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return None as a similar word for!
+2024-05-05 14:43:12,210 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 14:43:13,514 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 14:43:13,514 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:08:01,989 - dspy.primitives.assertions - ERROR - AssertionError: 
+2024-05-05 15:08:03,980 - dspy.primitives.assertions - ERROR - AssertionError: Do not return kitchen as a similar word for!
+2024-05-05 15:09:57,512 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:10:14,129 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:10:15,690 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:10:17,409 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:14:54,493 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:15:10,187 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:15:22,753 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:15:43,355 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:15:43,357 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 15:15:45,034 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:19,308 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:20,630 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:23,491 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:26,329 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:30,781 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:32,197 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:32,197 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:36,245 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:37,756 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:37,757 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,376 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,377 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,380 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,382 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,383 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,385 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,385 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,388 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,389 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:03:39,390 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:06:09,477 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:10,993 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:12,464 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:13,862 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:15,344 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:16,891 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:19,976 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:21,534 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:21,535 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:24,254 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:24,255 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:24,256 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:24,257 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:24,258 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:24,259 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:25,818 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:27,161 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:06:28,541 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return library as a similar word for!
+2024-05-05 16:09:18,912 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:20,553 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:20,554 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:22,106 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:23,691 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:23,692 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:25,244 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:26,727 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:26,728 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:26,728 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:26,729 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:26,729 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:28,070 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:29,663 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:29,664 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:31,226 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:32,686 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:32,688 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:34,231 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:35,665 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:35,666 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:37,002 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:38,416 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:38,419 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:39,846 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:41,497 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:09:41,498 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return ratatouille as a similar word for!
+2024-05-05 16:17:09,230 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!
+2024-05-05 16:17:09,232 - dspy.primitives.assertions - ERROR - SuggestionFailed: Do not return kitchen as a similar word for!

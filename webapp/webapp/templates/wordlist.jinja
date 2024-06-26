@@ -1,0 +1,69 @@
+{% extends "base.jinja" %}
+{% block title %}
+    Wordlist
+{% endblock title %}
+{% block content %}
+    {# <mark> <b>Debug only:</b> You can reset the keywords by visiting <a href="/resetkeywords">/resetkeywords</a></mark>
+    <hr> #}
+    <hgroup>
+        <h1>Instructions</h1>
+        <p>Read this before starting. You can always return here later.</p>
+    </hgroup>
+    <h3>The Keyword Method</h3>
+    <p>
+        In this experiment, you will be using the <i>keyword method</i> to learn words in a foreign language. 
+        The keyword method is a technique used for learning new words by associating them with a <i>keyword</i> in your native language.
+    </p>
+    <p>
+        As an example, consider the following pair of words:
+        <ul>
+            <li>
+                French: <i>poisson</i>
+            </li>
+            <li>
+                English: <i>fish</i>
+            </li>
+        </ul>
+    </p>
+    <p>
+        The French word <i>poisson</i> looks a lot like the English word <i>poison</i>.
+        You can link the two words together with a vivid mental image, for example, by imagining a fish drinking a bottle of poison.
+    </p>
+    <p>
+        Next time you see the word <i>poisson</i>, you will remember the keyword <i>poison</i>, which reminds you of the image, and thus the translation <i>fish</i>.
+    </p>
+    <h3>This Experiment</h3>
+    <p>
+        You will be presented with 36 German words and their translations, one at a time.
+        For each pair of words, a keyword is generated. 
+        For some of the pairs, if you don't think the association between the German word and the keyword is strong enough, you can choose from other options, or input your own.
+        For the others, you should use the given keyword.
+    </p>
+    <p>
+        After the keyword has been set, the interface will look like this.
+        You can see the keyword (A), a description and picture (B), and the option to get a new description or picture (C).
+    </p>
+    <div class="centered">
+        <img width="900" alt="interface"
+             src="{{ url_for('static', filename='images/interface.jpg') }}" />
+    </div>
+    <p>
+        It is important for you to close your eyes for a few seconds, and try to strongly imagine a visual scene connecting the given keyword with the English meaning.
+        The description and pictures are there to help you, but <u>you may ignore them</u> and create your own mental image.
+    </p>
+    <p>After every set of 12 words, you will have a small test, to reinforce the previously learnt words.</p>
+    <p>At the end, you'll have a short break and then a final test.</p>
+    <p>If you have any questions, please ask Safouane.</p>
+    <p>
+        When you're ready, <a href="{{ url_for('wordpair.wordpairpage', id=1) }}">click here to start</a>.
+    </p>
+    {# <ol>
+        {% for pair in wordlist.words.values() %}
+            <li>
+                <article>
+                    <a href="{{ url_for('wordpair.wordpairpage', id=loop.index) }}">{{ pair.native_word }} - {{ pair.foreign_word }}</a>
+                </article>
+            </li>
+        {% endfor %}
+    </ol> #}
+{% endblock content %}

@@ -1,0 +1,95 @@
+{% extends "base.jinja" %}
+{% block title %}
+    Word pair
+{% endblock title %}
+{% block content %}
+    {% block wordpairblock %}
+        <article>
+            <header class="grid">
+                {% if currentid in (1, 13, 25) %}
+                    <div class="secondary text-left">&nbsp;</div>
+                {% else %}
+                    <a class="secondary text-left"
+                       href="{{ url_for('wordpair.wordpairpage', id=currentid-1) }}">< Previous</a>
+                {% endif %}
+                <span class="secondary text-center">{{ currentid }}/{{ wordlist.words|length }}</span>
+                {% if currentid in (12, 24, 36) %}
+                    <a class="secondary text-right"
+                       href="{{ url_for('testpage', start=currentid-11, end=currentid+1) }}">Test ></a>
+                {% else %}
+                    <a class="secondary text-right"
+                       href="{{ url_for('wordpair.wordpairpage', id=currentid+1) }}">Next ></a>
+                {% endif %}
+            </header>
+            <div class="grid text-center">
+                <div id="foreignword">
+                    <small>{{ wordlist.foreign_lang }}</small>
+                    <h1>{{ wordpair.foreign_word }}</h1>
+                </div>
+                <div id="nativeword">
+                    <small>{{ wordlist.native_lang }}</small>
+                    <h1>{{ wordpair.native_word|capitalize }}</h1>
+                </div>
+            </div>
+        </article>
+    {% endblock wordpairblock %}
+    <article id="intra">
+        {% block keywordblock %}
+            <div id="keyword" class="text-center centered">
+                {% if keyword %}
+                    <small>Keyword</small>
+                    <h1>{{ keyword }}</h1>
+                {% else %}
+                    <button hx-post="keyword" hx-target="#keyword">Generate keyword</button>
+                {% endif %}
+            </div>
+        {% endblock keywordblock %}
+        {% block verbalcueblock %}
+            <div id="verbalcue">
+                {% if verbal_cue %}
+                    <blockquote>
+                        {{ verbal_cue }}
+                    </blockquote>
+                {% elif keyword %}
+                    <div id="verbalcue" hx-post="verbalcue" hx-trigger="load"></div>
+                {% else %}
+                    <div id="verbalcue"></div>
+                {% endif %}
+            {% endblock verbalcueblock %}
+        </div>
+        {% block visualcueblock %}
+            <div id="visualcue">
+                {% if visual_cue %}
+                    <img src="{{ url_for('download_file',filename=visual_cue) }}"
+                         alt="Visual Cue"
+                         height="300"
+                         width="300">
+                {% elif verbal_cue %}
+                    <div id="visualcue" hx-post="visualcue" hx-trigger="load"></div>
+                {% else %}
+                    <div id="visualcue"></div>
+                {% endif %}
+            </div>
+        {% endblock visualcueblock %}
+        {% block footerblock %}
+            <footer id="cuefooter">
+                <div role="group">
+                    {% if visual_cue %}
+                        <button hx-post="regen"
+                                hx-target="#visualcue"
+                                hx-vals='{"type": "visualcue"}'
+                                {% if generated_by == "transphoner" %}style="display: none"{% endif %}
+                                type="reset">Regenerate image</button>
+                    {% endif %}
+                    {% if verbal_cue %}
+                        <button hx-post="regen"
+                                hx-target="#verbalcue"
+                                hx-vals='{"type": "verbalcue"}'
+                                {% if generated_by == "transphoner" %}style="display: none"{% endif %}
+                                class="contrast">Regenerate description</button>
+                    {% endif %}
+                </div>
+            </footer>
+        {% endblock footerblock %}
+    </article>
+{% endblock content %}

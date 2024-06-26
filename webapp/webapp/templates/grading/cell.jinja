@@ -1,0 +1,19 @@
+<div x-data="{ current_grade: '{{ current_grade }}' }" x-bind:class="{
+        'pico-background-green-50': current_grade === 'correct',
+        'pico-background-red-50': current_grade === 'incorrect',
+        'pico-background-amber-50': current_grade === 'partial',
+        'pico-background-violet-100': current_grade === 'keyword'
+    }" >
+    <p>
+        {{ final_answer }}
+    </p>
+    <select name='{{ i }}' hx-post='/grade/{{ u.user_id }}' hx-swap='none' x-model="current_grade">
+        <option {% if current_grade == '' %}selected="selected"{% endif %} disabled value="">-</option>
+        <option {% if current_grade == 'correct' %}selected="selected"{% endif %} value='correct'>Yes</option>
+        <option {% if current_grade == 'incorrect' %}selected="selected"{% endif %} value='incorrect'>No</option>
+        <option {% if current_grade == 'partial' %}selected="selected"{% endif %} value='partial'>Half</option>
+        <option {% if current_grade == 'keyword' %}selected="selected"{% endif %} value='keyword'>Keyword</option>
+    </select>
+    <small><i>{{ keyword.keyword }} <small><small>- {{ keyword.verbal_cue }}</small></small></i></small>
+    
+</div>

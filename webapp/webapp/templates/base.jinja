@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon"
+              href="{{ url_for('static', filename='favicon.ico') }}">
+        <!--------- CSS --------->
+        <!-- <link rel="stylesheet"
+       href="{{ url_for('static', filename='styles/marx.min.css') }}"> -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+        {# href="{{ url_for('static', filename='styles/pico.pumpkin.min.css') }}"> #}
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='styles/main.css') }}">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css" />
+        <!-- <link rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+        <!-- <link rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" /> -->
+        <!--------- JS ---------->
+        <script src="{{ url_for('static', filename='scripts/htmx.min.js')}}"></script>
+        {# <script src="{{ url_for('static', filename='scripts/response-oob.js')}}"></script> #}
+        <!-- <script src="https://unpkg.com/hyperscript.org@0.9.12"></script> -->
+        {# <script src="https:///unpkg.com/alpinejs" defer></script> #}
+        <script src="{{ url_for('static', filename='scripts/alpinejs.min.js') }}"
+                defer></script>
+        <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script> -->
+        <title>
+            {% block title %}
+                WebApp
+            {% endblock title %}
+        </title>
+    </head>
+    <body hx-boost="true">
+        <header class="container-fluid">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{{ url_for("index") }}">
+                            <h3>KWM experiment</h3>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{{ url_for("index") }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for("logout") }}">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            {% block content %}
+                Content here
+            {% endblock content %}
+        </main>
+    </body>
+</html>

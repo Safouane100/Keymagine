@@ -1,0 +1,45 @@
+.container {
+    max-width: 900px;
+}
+
+.spacebetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column; /* Add this line */
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: center;
+}
+
+.text-left {
+    text-align: center;
+}
+
+blockquote.htmx-settling {
+    opacity: 0;
+}
+
+blockquote {
+    opacity: 1;
+    transition: opacity 5s ease-out;
+}
+
+.secondary {
+    color: var(--pico-secondary);
+}

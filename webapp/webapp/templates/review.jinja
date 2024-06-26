@@ -1,0 +1,35 @@
+{% extends "base.jinja" %}
+{% block title %}
+    Review
+{% endblock title %}
+{% block content %}
+    <form action="{{ url_for("review") }}" method="post">
+        <h1>Review</h1>
+        <p>That was it for the test. You're almost done! I would really appreciate your feedback on this experiment</p>
+        <h2>Helpfulness</h2>
+        <p>How helpful did you find the keywords? Please rate them from 1 (not helpful at all) to 5 (extremely helpful).</p>
+        {% for i, wp in wordlist.words.items() %}
+            <div class="grid">
+                <p>{{ wp.foreign_word }}</p>
+                <i>{{ user.get_keyword(wp).keyword }}</i>
+                <p>{{ wp.native_word|capitalize }}</p>
+                <select name="helpfulness{{ loop.index }}" required>
+                    <option selected disabled value="">Helpfulness</option>
+                    <option>1 - Not helpful at all</option>
+                    <option>2 - Slightly helpful</option>
+                    <option>3 - Somewhat helpful</option>
+                    <option>4 - Very helpful</option>
+                    <option>5 - Extremely helpful</option>
+                </select>
+            </div>
+        {% endfor %}
+        <h2>Open feedback</h2>
+        <p>
+            Did you notice any difference between when you could choose your keyword, and the ones where you couldn't? If so, what difference?
+        </p>
+        <textarea name="differences"></textarea>
+        <p>Do you have any other thoughts, feedback or ideas? Anything goes.</p>
+        <textarea name="feedback"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}

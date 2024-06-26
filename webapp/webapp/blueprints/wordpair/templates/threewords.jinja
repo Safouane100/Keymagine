@@ -1,0 +1,50 @@
+{% if limit == 1 %}
+    <p>
+        does <i>{{ wordpair.foreign_word|lower }}</i> make you think of <b>{{ result.result[0] }}</b>?
+    </p>
+    <div hx-vals='{"taskid": "{{ result.id }}"}' hx-target="#keyword">
+        <button class="outline"
+                hx-vals='{"selectedOption": "1.{{ result.result[0] }}"}'
+                hx-post="submitpreference"
+                hx-select-oob="#verbalcue">Agree</button>
+        <button class="outline secondary" hx-post="disagree">Disagree</button>
+    </div>
+{% else %}
+    <form hx-vals='{"taskid": "{{ result.id }}"}'
+          hx-post="submitpreference"
+          x-data="{'selectedOption': '{{ 'customOption' if isempty else '' }}'}"
+          hx-select-oob="#verbalcue"el>
+        <fieldset>
+            <legend>
+                What does <i>{{ wordpair.foreign_word }}</i> make you think of?
+            </legend>
+            {% for r in result.result %}
+                <label>
+                    <input type="radio"
+                           id="option{{ loop.index }}"
+                           value="{{ loop.index }}.{{ r }}"
+                           x-model="selectedOption">
+                    {{ r }}
+                </label>
+            {% endfor %}
+            <label>
+                <input type="radio"
+                       id="customOption"
+                       value="customOption"
+                       x-model="selectedOption">
+                My own keyword, namely...
+            </label>
+            {% if isempty %}
+                <input type="text"
+                       aria-invalid="true"
+                       placeholder="Fill in your keyword"
+                       name="text"
+                       x-show="selectedOption === 'customOption'"
+                       checked>
+            {% else %}
+                <input type="text" name="text" x-show="selectedOption === 'customOption'">
+            {% endif %}
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+{% endif %}

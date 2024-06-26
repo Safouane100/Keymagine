@@ -1,0 +1,30 @@
+{% extends "base.jinja" %}
+{% block title %}
+    Test
+{% endblock title %}
+{% block content %}
+    <h1>Test on words {{ start }} - {{ end-1 }}</h1>
+    <p>
+        Write the English translation of the following words.
+        Use the keyword method to remember the words.
+        This is just for reinforcing your memory. You will not get feedback.
+        If you don't know a word, write "idk" or "-".
+    </p>
+    <hr />
+    <form method="post">
+        {% for i in range(start, end) %}
+            <label for="translation{{ i }}">{{ wordlist.words.get(i).foreign_word }}</label>
+            <input type="text" name="answer{{ i }}" required />
+        {% endfor %}
+        {% set redirect_url = url_for("index") %}
+        {% if start == 1 %}
+            {% set redirect_url = url_for('wordpair.wordpairpage', id=end) %}
+        {% elif start == 13 %}
+            {% set redirect_url = url_for('wordpair.wordpairpage', id=end) %}
+        {% elif start == 25 %}
+            {% set redirect_url = url_for('break_page') %}
+        {% endif %}
+        <input type="hidden" name="redirect_url" value="{{ redirect_url }}">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}

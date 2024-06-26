@@ -1,0 +1,31 @@
+
+#flask
+Flask==3.0.0
+werkzeug==3.0.1
+jinja2==3.1.2
+jinja2-fragments 
+gunicorn==21.2.0
+celery
+flake8
+pytest
+
+# mongo
+mongoengine
+bunnet
+beanie
+motor
+pydantic
+
+# dspy 
+regex~=2023.10.3
+cython==0.29.36
+hdbscan==0.8.33
+# dspy-ai==2.2.0
+dspy-ai
+arize-phoenix 
+openinference-instrumentation-dspy
+opentelemetry-exporter-otlp
+
+prodiapy==5.1.2
+# Remove
+tabulate

@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+
+  website:
+    build: .
+    command: >
+      gunicorn -b 0.0.0.0:8000
+        --access-logfile -
+        --reload
+        "webapp.app:create_app()"
+    environment:
+      PYTHONUNBUFFERED: 'true'
+    volumes:
+      - '.:/webapp'
+    ports:
+      - '8000:8000'
+    env_file:
+      - .env
+    # restart: always
+
+  # redis:
+  #   image: redis:latest
+  #   command: redis-server --requirepass redis --maxmemory 512mb
+  #   ports:
+  #     - "6379:6379"
+
+  worker:
+    build: .
+    command: celery -A webapp.blueprints.wordpair.tasks worker -l info
+    env_file:
+      - ".env"
+    volumes:
+      - ".:/webapp"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+    - mongodb_data:/data/db
+    command: --logpath /dev/null
+
+volumes:
+  mongodb_data:

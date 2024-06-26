@@ -1,0 +1,13 @@
+{% extends "base.jinja" %}
+{% block content %}
+    <h1>Take a break</h1>
+    <ol>
+        <li>
+            Click <b><a href="https://duckduckgo.com/?va=g&t=hh&q=5+minute+timer&ia=answer"
+                        target="_blank">this link</a></b> to set a timer for 5 minutes.
+        </li>
+        <li>click <a href="https://slowroads.io" target="_blank">this link</a> to take a break.</li>
+        <li>When the timer is done, continue.</li>
+    </ol>
+    <a class="secondary" href='{{ url_for("finaltest") }}'>Continue ></a>
+{% endblock content %}

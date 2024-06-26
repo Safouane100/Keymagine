@@ -1,0 +1,36 @@
+{% extends "base.jinja" %}
+{% block title %}
+    Final test
+{% endblock title %}
+Final test
+{% block content %}
+    <h1>Final test</h1>
+    <p>
+        You will now be tested on all words you've learnt. You must answer every question. If you don't know a word, write <i>"idk", "n/a"</i> or <i>"-"</i>.
+    </p>
+    <p>After submitting, you can't go back.</p>
+    <form action="">
+        {% for k, wordpair in wordlist.words.items() %}
+            <br>
+            <article>
+                <header class="secondary centered">
+                    {{ k }}
+                </header>
+                <div class="grid text-center">
+                    <div id="foreignword">
+                        <small>{{ wordlist.foreign_lang }}</small>
+                        <h1>{{ wordpair.foreign_word }}</h1>
+                    </div>
+                    <div id="nativeword">
+                        <small>{{ wordlist.native_lang }}</small>
+                        <input name="answer{{ loop.index }}" required>
+                    </div>
+                </div>
+            </article>
+            <br>
+            <hr>
+        {% endfor %}
+        <p>Once submitted, your answers cannot be changed. Please review carefully.</p>
+    <button type="submit" formmethod="post">Submit test</button>
+</form>
+{% endblock content %}
