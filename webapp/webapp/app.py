@@ -101,9 +101,6 @@ def create_app(settings_override=None):
         if 'user_id' not in session:
             if request.endpoint == 'login': return
             return redirect(url_for('login'))
-        if not session.get("consent_given"):
-            if request.endpoint == 'consent': return 
-            return redirect(url_for('consent'))
 
     @app.get("/") 
     def index():
@@ -140,26 +137,6 @@ def create_app(settings_override=None):
     def is_valid_user(user_id):
         return user_id in valid_users.keys()
 
-    @app.route("/consent", methods=['GET', 'POST'])
-    def consent():
-        if request.method == 'POST':
-            if request.form.get('checkbox'):
-                session['consent_given'] = True
-                # User.objects.get(user_id=session["user_id"]).update(consented=True)
-                u = User.get_user(session['user_id'])
-                u.consented=True
-                u.save()
-                res = make_response("Proceeding...")
-                res.headers['HX-Redirect'] = url_for('index')
-                return res
-            else:
-                return '''
-                    <input type="checkbox" id="checkbox" name="checkbox" role="switch" aria-invalid="true" required>
-                    I agree to all of the above. <span><strong>You must agree in order to proceed.</strong></span>
-                '''
-        elif request.method == "GET":
-            now = datetime.datetime.now()
-            return render_template('consentform.jinja', now=now)
 
     @app.route("/testpage", methods=['GET', 'POST'])
     def testpage():
