@@ -27,5 +27,3 @@ openinference-instrumentation-dspy
 opentelemetry-exporter-otlp
 
 prodiapy==5.1.2
-# Remove
-tabulate
